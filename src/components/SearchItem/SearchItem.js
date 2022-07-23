@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import "./SearchItem.css";
 
 const SearchItemData = {
-  photo:
-    "https://www.manooi.com/mn17/wp-content/uploads/vague_kensington_1.jpg",
+  photo: "https://www.manooi.com/mn17/wp-content/uploads/vague_kensington_1.jpg",
   name: "Warsaw Apartment Premium",
   address: "Grzybowska 43A, 00-855",
   distance: 1000,
   type: "Apartment",
-  description:
-    "1 living room · 2 bedroom · 1 bathroom · 1 kitchen · 3 beds (2 full, 1 sofa bed) · 185²",
+  description: "1 living room · 2 bedroom · 1 bathroom · 1 kitchen · 3 beds (2 full, 1 sofa bed) · 185²",
   rating: 9.3,
   cheapestPrice: 450,
   id: 123,

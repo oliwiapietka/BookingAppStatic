@@ -156,6 +156,10 @@
   font-size: 20px;
 }
 
+.hotel-details-loading {
+  margin: auto;
+}
+
 @media (max-width: 460px) {
   .hotel-details-price {
     width: 270px;

@@ -48,7 +48,7 @@ const HotelDetailsPage = () => {
     <div>
       <NavBar />
       {loading ? (
-        <div>
+        <div className="hotel-details-loading">
           <MoonLoader />
         </div>
       ) : (

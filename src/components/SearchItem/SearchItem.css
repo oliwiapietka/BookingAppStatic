@@ -97,6 +97,9 @@
   .search-item {
     width: 700px;
   }
+  .search-item-title {
+    font-size: 23px;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -117,6 +120,7 @@
 @media (max-width: 720px) {
   .search-item-img {
     width: 220px;
+    height: auto;
   }
   .search-item-title {
     font-size: 25px;
@@ -128,8 +132,16 @@
   .search-item-details-container {
     max-width: 120px;
   }
+  .search-item-availability-btn {
+    left: 5px;
+    right: none;
+  }
   .search-item-details {
-    max-width: 190px;
+    max-width: 240px;
+  }
+  .search-item-price {
+    left: 8px;
+    right: none;
   }
 }
 
@@ -139,5 +151,16 @@
   }
   .search-item-img {
     height: 400px;
+  }
+  .search-item-availability-btn {
+    left: 5px;
+    right: none;
+  }
+  .search-item-details {
+    max-width: 120px;
+  }
+  .search-item-price {
+    left: 8px;
+    right: none;
   }
 }
