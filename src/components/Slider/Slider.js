@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./Slider.css";
+import { motion } from "framer-motion";
 
 export default function Slider() {
   const dataSlider = [
@@ -64,17 +65,29 @@ export default function Slider() {
 
   return (
     <div className="container-slider">
-      <p className="main-text">
+      <motion.p
+        className="main-text"
+        transition={{ duration: 0.9 }}
+        initial={{ opacity: 0 }}
+        whileHover={{ scale: 1.1 }}
+        animate={{ opacity: 1, y: 50 }}
+      >
         Enjoy Your Dream <br></br> Vacation In Your <br></br>{" "}
         <div className="dream-hotel-text">DREAM HOTEL</div>
-      </p>
+      </motion.p>
       {dataSlider.map((obj, index) => {
         return (
           <div
             key={obj.id}
             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
           >
-            <img src={obj.src} alt={obj.alt}/>
+            <motion.img
+              src={obj.src}
+              alt={obj.alt}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0.9 }}
+            />
           </div>
         );
       })}

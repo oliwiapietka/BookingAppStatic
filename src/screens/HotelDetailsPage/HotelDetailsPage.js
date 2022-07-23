@@ -6,6 +6,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import useFetch from "../../hooks/useFetch";
 import "./HotelDetailsPage.css";
 import Reserve from "../../components/Reserve/Reserve";
+import { motion } from "framer-motion";
 
 const HotelDetailsPage = () => {
   const location = useLocation();
@@ -45,92 +46,98 @@ const HotelDetailsPage = () => {
   return (
     <div>
       <NavBar />
-        <div className="hotel-container">
-          {open && (
-            <div className="hotel-slider">
-              <div
-                onClick={() => setOpen(false)}
-                className="hotel-slider-close"
-              >
-                <ion-icon name="close-sharp"></ion-icon>
-              </div>
-              <div className="hotel-slider-arrow-left">
-                <ion-icon
-                  onClick={() => handleSlide("left")}
-                  name="chevron-back-sharp"
-                ></ion-icon>
-              </div>
-              <div className="hotel-slider-wrapper">
-                <img
-                  src={hotelPhotos[slideIndex]}
-                  alt=""
-                  className="hotel-slider-img"
-                />
-              </div>
-              <div className="hotel-slider-arrow-right">
-                <ion-icon
-                  onClick={() => handleSlide("right")}
-                  name="chevron-forward-sharp"
-                ></ion-icon>
-              </div>
+      <div className="hotel-container">
+        {open && (
+          <div className="hotel-slider">
+            <div onClick={() => setOpen(false)} className="hotel-slider-close">
+              <ion-icon name="close-sharp"></ion-icon>
             </div>
-          )}
-          <h1 className="hotel-title">Warsaw Apartment Premium</h1>
-          <div className="hotel-location-container">
-            <ion-icon name="location-sharp"></ion-icon>
-            <p className="hotel-location">Grzybowska 43A, 00-855</p>
-          </div>
-          <span className="hotel-text-distance">
-            Excellent location - 1000m from center!
-          </span>
-          <div className="hotel-imgs">
-            {hotelPhotos.map((photo, index) => (
+            <div className="hotel-slider-arrow-left">
+              <ion-icon
+                onClick={() => handleSlide("left")}
+                name="chevron-back-sharp"
+              ></ion-icon>
+            </div>
+            <div className="hotel-slider-wrapper">
               <img
-                onClick={() => onClickHandler(index)}
-                src={[photo]}
+                src={hotelPhotos[slideIndex]}
                 alt=""
-                className="hotel-img"
-                key={index}
+                className="hotel-slider-img"
               />
-            ))}
+            </div>
+            <div className="hotel-slider-arrow-right">
+              <ion-icon
+                onClick={() => handleSlide("right")}
+                name="chevron-forward-sharp"
+              ></ion-icon>
+            </div>
           </div>
-          <div className="hotel-details">
-            <div className="hotel-details-text">
-              <h1>Warsaw Apartment Premium Mennica Residence</h1>
-              <p>
-                This Warsaw Apartment is just a 10-minute walk from Warsaw
-                Central Station. Apartment has accommodations with a restaurant,
-                a bar, a garden and free WiFi. This apartment provides free
-                private parking and room service. The apartment is equipped with
-                1 bedroom, 1 bathroom, bed linen, towels, a flat-screen TV with
-                satellite channels, a dining area, a fully equipped kitchen, and
-                a patio This apartment have a large, modern bathroom with a
-                hairdryer. Featuring a kitchenette with a dishwasher and a
-                microwave, each unit also comes with a safety deposit box, a
-                cable flat-screen TV, ironing facilities, desk and a seating
-                area with a sofa. There's a private bathroom with shower in all
-                units, along with a hairdryer and free toiletries. A car rental
-                service is available. This is our guests favorite part of
-                Warsaw, according to independent reviews. 1 living room · 2
-                bedrooms · 1 bathroom · 1 kitchen · 3 beds (2 full, 1 sofa bed)
-                · 185²
-              </p>
-            </div>
-            <div className="hotel-details-price">
-              <h1>Perfect for a 4-night stay!</h1>
-              <span className="hotel-details-score">
-                Located in the top-rated area in Warsaw, this property has an
-                excellent location score of 9.3!
-              </span>
-              <h2>
-                <b className="hotel-price">$300 (4 nights)</b>
-              </h2>
-              <button onClick={handleClick} className="hotel-btn">
-                Reserve or Book Now!
-              </button>
-            </div>
+        )}
+        <motion.h1
+          transition={{ duration: 0.9 }}
+          initial={{ opacity: 0 }}
+          whileHover={{ scale: 1.1 }}
+          animate={{ opacity: 1 }}
+          className="hotel-title"
+        >
+          Warsaw Apartment Premium
+        </motion.h1>
+        <div className="hotel-location-container">
+          <ion-icon name="location-sharp"></ion-icon>
+          <p className="hotel-location">Grzybowska 43A, 00-855</p>
+        </div>
+        <span className="hotel-text-distance">
+          Excellent location - 1000m from center!
+        </span>
+        <div className="hotel-imgs">
+          {hotelPhotos.map((photo, index) => (
+            <motion.img
+              onClick={() => onClickHandler(index)}
+              src={[photo]}
+              alt=""
+              className="hotel-img"
+              key={index}
+              whileHover={{ scale: 1.07 }}
+              transition={{ duration: 0.2 }}
+            />
+          ))}
+        </div>
+        <div className="hotel-details">
+          <div className="hotel-details-text">
+            <h1>Warsaw Apartment Premium Mennica Residence</h1>
+            <p>
+              This Warsaw Apartment is just a 10-minute walk from Warsaw Central
+              Station. Apartment has accommodations with a restaurant, a bar, a
+              garden and free WiFi. This apartment provides free private parking
+              and room service. The apartment is equipped with 1 bedroom, 1
+              bathroom, bed linen, towels, a flat-screen TV with satellite
+              channels, a dining area, a fully equipped kitchen, and a patio
+              This apartment have a large, modern bathroom with a hairdryer.
+              Featuring a kitchenette with a dishwasher and a microwave, each
+              unit also comes with a safety deposit box, a cable flat-screen TV,
+              ironing facilities, desk and a seating area with a sofa. There's a
+              private bathroom with shower in all units, along with a hairdryer
+              and free toiletries. A car rental service is available. This is
+              our guests favorite part of Warsaw, according to independent
+              reviews. 1 living room · 2 bedrooms · 1 bathroom · 1 kitchen · 3
+              beds (2 full, 1 sofa bed) · 185²
+            </p>
+          </div>
+          <div className="hotel-details-price">
+            <h1>Perfect for a 4-night stay!</h1>
+            <span className="hotel-details-score">
+              Located in the top-rated area in Warsaw, this property has an
+              excellent location score of 9.3!
+            </span>
+            <h2>
+              <b className="hotel-price">$300 (4 nights)</b>
+            </h2>
+            <button onClick={handleClick} className="hotel-btn">
+              Reserve or Book Now!
+            </button>
           </div>
         </div>
+      </div>
       {openModal && <Reserve setOpen={setOpenModal} />}
       <Footer />
     </div>
