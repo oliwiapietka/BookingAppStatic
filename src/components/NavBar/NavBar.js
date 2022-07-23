@@ -6,14 +6,14 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <Link
-        to="/"
+        to="/BookingAppStatic"
         style={{ textDecoration: "inherit", color: "inherit" }}
       >
         <div className="logo">BOOKING</div>
       </Link>
       <div className="other-container">
         <Link
-          to="/"
+          to="/BookingAppStatic"
           style={{ textDecoration: "inherit", color: "inherit" }}
         >
           <div>Home</div>

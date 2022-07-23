@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   const handleClick = () => {
-      navigate("/");
+      navigate("/BookingAppStatic");
     }
 
   return (
