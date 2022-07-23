@@ -29,8 +29,8 @@ const SearchItem = () => {
           <p className="search-item-type">{SearchItemData.type}</p>
           <p className="search-item-details">{SearchItemData.description}</p>
           <div>
-            <span>Excellent </span>
-            <span>
+            <span className="search-item-rating-2">Excellent </span>
+            <span className="search-item-rating">
               {SearchItemData.rating} <ion-icon name="star"></ion-icon>
             </span>
           </div>

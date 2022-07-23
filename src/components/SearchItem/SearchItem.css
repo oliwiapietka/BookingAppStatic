@@ -93,6 +93,32 @@
   text-align: left;
 }
 
+.search-item-rating {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(79, 150, 243);
+  border-radius: 6px;
+  padding: 3px;
+  top: 10px;
+  color: white;
+  font-weight: 600;
+  left: 8px;
+  font-size: 20px;
+}
+
+.search-item-rating-2 {
+  position: absolute;
+  background-color: rgb(79, 150, 243);
+  border-radius: 6px;
+  padding: 3px;
+  top: 10px;
+  color: white;
+  font-weight: 600;
+  left: 65px;
+  font-size: 20px;
+}
+
 @media (max-width: 1300px) {
   .search-item {
     width: 700px;
@@ -163,5 +189,18 @@
   .search-item-price {
     left: 8px;
     right: none;
+  }
+  .search-item-availability-btn {
+    left: 5px;
+    right: none;
+  }
+  .search-item-details {
+    max-width: 120px;
+  }
+  .search-item-rating {
+    position: absolute;
+    left: 8px;
+    bottom: 10px;
+    color: white;
   }
 }
