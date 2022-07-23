@@ -18,14 +18,6 @@ const SearchResultPage = () => {
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
 
-  const {loading, reFetch } = useFetch(
-    `/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
-  );
-
-  const handleClickButton = () => {
-    reFetch();
-  };
-
   return (
     <div>
       <NavBar />
@@ -114,17 +106,11 @@ const SearchResultPage = () => {
           </div>
           <button
             className="result-page-search-btn"
-            onClick={handleClickButton}
           >
             Search
           </button>
         </div>
         <div className="result-page-search-item">
-          {loading ? (
-            <div className="search-result-loading">
-              <MoonLoader />
-            </div>
-          ) : (
             <>
               <SearchItem />
               <SearchItem />
@@ -132,7 +118,6 @@ const SearchResultPage = () => {
               <SearchItem />
               <SearchItem />
             </>
-          )}
         </div>
       </div>
       <Footer />

@@ -14,8 +14,6 @@ const HotelDetailsPage = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { loading } = useFetch(`/hotels/find/${hotelId}`);
-
   const hotelPhotos = [
     "https://www.manooi.com/mn17/wp-content/uploads/vague_kensington_1.jpg",
     "http://ej-interiors.co.uk/wp-content/uploads/2019/06/0081_014_07_Master_Bedroom_Master_Draft_24-1024x684.jpg",
@@ -47,11 +45,6 @@ const HotelDetailsPage = () => {
   return (
     <div>
       <NavBar />
-      {loading ? (
-        <div className="hotel-details-loading">
-          <MoonLoader />
-        </div>
-      ) : (
         <div className="hotel-container">
           {open && (
             <div className="hotel-slider">
@@ -97,6 +90,7 @@ const HotelDetailsPage = () => {
                 src={[photo]}
                 alt=""
                 className="hotel-img"
+                key={index}
               />
             ))}
           </div>
@@ -137,7 +131,6 @@ const HotelDetailsPage = () => {
             </div>
           </div>
         </div>
-      )}
       {openModal && <Reserve setOpen={setOpenModal} />}
       <Footer />
     </div>
