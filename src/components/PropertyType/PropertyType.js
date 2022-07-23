@@ -54,8 +54,6 @@ const PropertyType = () => {
     },
   ];
 
-  // const { data, loading, error } = useFetch("/hotels/countByType");
-
   return (
     <div className="properties-container">
       <p className="property-type-text-search">Browse by property type</p>

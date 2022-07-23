@@ -105,6 +105,7 @@
   font-weight: 600;
   left: 8px;
   font-size: 20px;
+  height: fit-content;
 }
 
 .search-item-rating-2 {

@@ -56,19 +56,9 @@ const Explore = () => {
     },
   ];
 
-  const { loading } = useFetch(
-    "/hotels/countByCity?cities=dubai,japan,newzealand,greece,australia,philippines"
-  );
-
   return (
     <div className="explore-container">
       <p className="explore-text">Explore new places</p>
-      {loading ? (
-        <div className="explore-loading">
-          <MoonLoader />
-        </div>
-      ) : (
-        <>
           <div className="countries-container">
             {dataExplore.map(({ name, src, id, num, amount, alt }) => {
               return (
@@ -80,8 +70,6 @@ const Explore = () => {
               );
             })}
           </div>
-        </>
-      )}
     </div>
   );
 };
