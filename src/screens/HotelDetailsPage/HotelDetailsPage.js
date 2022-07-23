@@ -98,7 +98,7 @@ const HotelDetailsPage = () => {
               className="hotel-img"
               key={index}
               whileHover={{ scale: 1.07 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.4 }}
             />
           ))}
         </div>
@@ -132,9 +132,16 @@ const HotelDetailsPage = () => {
             <h2>
               <b className="hotel-price">$300 (4 nights)</b>
             </h2>
-            <button onClick={handleClick} className="hotel-btn">
+            <motion.button
+              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileHover={{ scale: 1.1 }}
+              animate={{ opacity: 1 }}
+              onClick={handleClick}
+              className="hotel-btn"
+            >
               Reserve or Book Now!
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
