@@ -1,0 +1,47 @@
+.property-type-text-search {
+  display: flex;
+  margin: 40px 0px 0px 150px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: rgb(28, 28, 28);
+}
+
+.property-type-text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(62, 62, 62);
+}
+
+.property-type-container {
+  display: flex;
+  overflow: scroll;
+  margin: 10px 150px;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .property-type-container {
+    margin: 15px;
+  }
+  .property-type-text-search {
+    justify-content: center;
+    margin: 0px;
+  }
+}
+
+.property-img {
+  float: left;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  margin-bottom: 3px;
+}
+
+.property-type-loading {
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
