@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BookingAppStatic/static/css/main.ea18ce66.css",
+    "main.css": "/BookingAppStatic/static/css/main.2e2fd13c.css",
     "main.js": "/BookingAppStatic/static/js/main.f167bdb4.js",
     "static/js/787.946f8af5.chunk.js": "/BookingAppStatic/static/js/787.946f8af5.chunk.js",
     "index.html": "/BookingAppStatic/index.html",
-    "main.ea18ce66.css.map": "/BookingAppStatic/static/css/main.ea18ce66.css.map",
+    "main.2e2fd13c.css.map": "/BookingAppStatic/static/css/main.2e2fd13c.css.map",
     "main.f167bdb4.js.map": "/BookingAppStatic/static/js/main.f167bdb4.js.map",
     "787.946f8af5.chunk.js.map": "/BookingAppStatic/static/js/787.946f8af5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea18ce66.css",
+    "static/css/main.2e2fd13c.css",
     "static/js/main.f167bdb4.js"
   ]
 }
